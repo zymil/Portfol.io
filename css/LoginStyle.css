@@ -6,18 +6,17 @@ body{
     background-position: auto;
     background-image: url(../img/portfolio4.png);
     -webkit-font-smoothing: antialiased;
-    display: block;
 }
 body > header{
-    font-size: 2em;
+    font-size: 2.1em;
     border-style: solid;
     flex-direction: column;
     text-align: center;
-    display: flex;
-    border-bottom-width: 15px;
-    margin-bottom: 1em;
+    border-bottom-width: 0.4em;
+    margin-bottom: 0.5em;
     margin-right: 10em;
     margin-left: 10em;
+    margin-top: -1em;
     border-top-width: 0;
     border-right-width: 0;
     border-left-width: 0;
@@ -25,6 +24,7 @@ body > header{
     resize: vertical;
     overflow: auto;
     font-family: "Lucida Handwriting";
+    display: flex;
 }
 body > article {
     text-align: center;
@@ -32,16 +32,16 @@ body > article {
     width: 50em;
     height: 18em;
     padding: 1em;
-    display: block;
     border-style: solid;
     background-color: rgb(184, 182, 169);
     border-radius: 2%;
     margin: auto;
     margin-bottom: 4em;
+    margin-top: 4em;
+    display: flex;
 }
 body > form {
     text-align: center;
-    display: block;
     border-style: solid;
     border-radius: 15px;
     background: #13d0ff94;
@@ -49,6 +49,7 @@ body > form {
     width: 15em;
     height: 15em;
     margin: auto;
+    display: column;
 }
 
 body > div {
@@ -80,4 +81,10 @@ body > form label input:focus{
 body input[type=submit]{
     background-color: #008CFF;
     color: white;
+}
+body > footer{
+    text-align: right;
+    font-size: 0.65em;
+    margin: auto;
+    display: block;
 }

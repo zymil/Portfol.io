@@ -18,21 +18,21 @@
     </header>
     <article>
         <h2>
-            <p>Register now and start managing your classes smarter.</p>
-             By registering you get the chance to organize your 
-             class notes, sketches and schedule into one single place.
+            Register now and start managing your classes smarter.
+            <p>By registering you get the chance to organize your 
+             class notes, sketches and schedule into one single place.</p>
             <p>Register with your credentials as well as your class timetables and class id.
              (As other students who are taking the same class will be able to access your snippets and vice-versa, only
              if you want to do so of course !</p>
         </h2>
     </article>
-    <form action="../actions/action_login.php" method="post">
+    <form action="../actions/ActionLogin.php" method="post">
         <h2>Log in</h2>
         <label>
             User Name <input type="text" name="username">
-        </label>
+       
         <p></p>
-        <label>
+      
             Password <input type="password" name="password">
         </label>
         <input type="submit" value="LOG IN">
@@ -43,6 +43,8 @@
             <input type="submit" value="SIGN UP">
         </form>
     </div>
-   
+   <footer>
+       <p>Copyright &copy; Grupo L, 2020</p>
+</footer>
 </body>
 </html>
