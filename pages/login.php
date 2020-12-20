@@ -1,0 +1,48 @@
+<?php 
+/*php comenta diferente! test*/
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- É assim que se comenta, vai adicionando notas! -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/LoginStyle.css" rel="stylesheet">
+    <title> Portfol.io </title>
+</head>
+
+<body>
+    <header>
+        <h1>Portfol.io</h1>
+        <!-- <img src="../img/portfolio.png" alt="logot"> -->
+    </header>
+    <article>
+        <h2>
+            <p>Register now and start managing your classes smarter.</p>
+             By registering you get the chance to organize your 
+             class notes, sketches and schedule into one single place.
+            <p>Register with your credentials as well as your class timetables and class id.
+             (As other students who are taking the same class will be able to access your snippets and vice-versa, only
+             if you want to do so of course!</p>
+        </h2>
+    </article>
+    <form action="../actions/action_login.php" method="post">
+        <h2>Log in</h2>
+        <label>
+            User Name <input type="text" name="username">
+        </label>
+        <p></p>
+        <label>
+            Password <input type="password" name="password">
+        </label>
+        <input type="submit" value="LOG IN">
+    </form>
+    <div id="newUser">
+        New User?
+        <form action="register.php">
+            <input type="submit" value="SIGN UP">
+        </form>
+    </div>
+   
+</body>
+</html>
