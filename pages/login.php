@@ -23,7 +23,7 @@
              class notes, sketches and schedule into one single place.
             <p>Register with your credentials as well as your class timetables and class id.
              (As other students who are taking the same class will be able to access your snippets and vice-versa, only
-             if you want to do so of course!</p>
+             if you want to do so of course !</p>
         </h2>
     </article>
     <form action="../actions/action_login.php" method="post">
