@@ -1,0 +1,41 @@
+body{
+    font-family: Arial, Verdana, monospace;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: auto;
+    background-image: url(../img/portfolio4.png);
+    -webkit-font-smoothing: antialiased;
+    margin-left: 10em;
+}
+body > header{
+    font-size: 2.1em;
+    border-style: solid;
+    flex-direction: column;
+    text-align: center;
+    border-bottom-width: 0.4em;
+    margin-bottom: 0.5em;
+    margin-right: 10em;
+    margin-left: 10em;
+    margin-top: -1em;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    border-radius: 37%;
+    resize: vertical;
+    overflow: auto;
+    font-family: "Lucida Handwriting";
+    display: flex;
+}
+body > footer{
+    text-align: right;
+    font-size: 0.65em;
+    margin: auto;
+    display: block;
+    margin-top: 10em;
+    list-style-type: none;
+    margin: 0;
+    margin-top: 35em;
+    margin-right: 5em;
+
+}

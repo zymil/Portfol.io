@@ -14,7 +14,7 @@
 <body>
     <header>
         <h1>Portfol.io</h1>
-        <!-- <img src="../img/portfolio.png" alt="logot"> -->
+        <!-- <img src="../img/rememberthealt.png" alt="good job"> -->
     </header>
     <article>
         <h2>
@@ -30,9 +30,7 @@
         <h2>Log in</h2>
         <label>
             User Name <input type="text" name="username">
-       
         <p></p>
-      
             Password <input type="password" name="password">
         </label>
         <input type="submit" value="LOG IN">
@@ -44,7 +42,10 @@
         </form>
     </div>
    <footer>
-       <p>Copyright &copy; Grupo L, 2020</p>
+    <a href="https://github.com/zymil/Portfolio">@github/Projeto</a>
+    <p></p>
+    <a href="../sql/createDatabase.php">Criar a base de dados </a>
+    <p>Copyright &copy; Grupo L, 2020</p>
 </footer>
 </body>
 </html>
