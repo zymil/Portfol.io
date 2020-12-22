@@ -1,2 +1,2 @@
 # SIBD
-PHP + HTML + CSS ++ SQL
+PHP + HTML + CSS + SQL
