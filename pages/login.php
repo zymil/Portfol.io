@@ -37,14 +37,14 @@
     </form>
     <div id="newUser">
         New User?
-        <form action="register.php">
+        <form action="registration.php">
             <input type="submit" value="SIGN UP">
         </form>
     </div>
    <footer>
     <a href="https://github.com/zymil/Portfolio">@github/Projeto</a>
     <p></p>
-    <a href="../sql/createDatabase.php">Criar a base de dados </a>
+    <a href="../database/createDatabase.php">Criar a base de dados </a>
     <p>Copyright &copy; Grupo L, 2020</p>
 </footer>
 </body>
