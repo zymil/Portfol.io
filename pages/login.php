@@ -23,22 +23,24 @@
              class notes, sketches and schedule into one single place.</p>
             <p>Register with your credentials as well as your class timetables and class id.
              (As other students who are taking the same class will be able to access your snippets and vice-versa, only
-             if you want to do so of course !</p>
+             if you want to do so of course !)</p>
         </h2>
     </article>
     <form action="../actions/ActionLogin.php" method="post">
-        <h2>Log in</h2>
+        
+        <h3>Log in</h3>
         <label>
             User Name <input type="text" name="username">
         <p></p>
             Password <input type="password" name="password">
         </label>
-        <input type="submit" value="LOG IN">
+        <p></p>
+        <input type="submit" value="Log In">
     </form>
     <div id="newUser">
         New User?
         <form action="registration.php">
-            <input type="submit" value="SIGN UP">
+            <input type="submit" value="Sign Up">
         </form>
     </div>
    <footer>

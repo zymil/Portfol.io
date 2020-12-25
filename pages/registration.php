@@ -7,7 +7,7 @@
 <!-- É assim que se comenta, vai adicionando notas! -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/LoginStyle.css" rel="stylesheet">
+    <link href="../css/RegistryStyle.css" rel="stylesheet">
     <title> Portfol.io </title>
 </head>
 
@@ -26,19 +26,33 @@
              if you want to do so of course !</p>
         </h2>
     </article>
-    <form action="../actions/ActionRegistration.php" method="post">
-        <h2>Registry</h2>
+    <form action="../actions/ActionRegistration.php" method="POST">
+        <h3>Register now!</h3>
+        <?php if (isset($_SESSION['message'])) { ?>
+            <div class="message">
+                <?=$_SESSION['message']?>
+            </div>
+        <?php unset($_SESSION['message']); } ?>
         <label>
-            User Name <input type="text" name="username">
+            User Name <input type="text" name="username"> 
         <p></p>
             Password <input type="password" name="password">
         <p></p>
-        Password <input type="password" name="password_confirmation">
+            Password <input type="password" name="password_confirmation">
         <p></p>
             Email <input type="text" name="email">
         </label>
-        <input type="submit" value="REGISTER">
+        <p></p>
+        <input type="submit" value="Register">
+        
     </form>
+    <div id="alreadyHasAcc">
+        Already have an account?
+        <form action="login.php">
+            <input type="submit" value="Log In">
+        </form>
+    </div>
+
    <footer>
     <a href="https://github.com/zymil/Portfolio">@github/Projeto</a>
     <p></p>

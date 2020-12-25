@@ -40,7 +40,6 @@ body > article {
     margin-top: 4em;
     display: flex;
 }
-
 body > form {
     text-align: center;
     border-style: solid;
@@ -48,16 +47,15 @@ body > form {
     background: #13d0ff94;
     padding: 20px;
     width: 15em;
-    height: 15em;
+    height: 22em;
     margin: auto;
+
 }
 
 body > form h3{
     text-align: center;
     font-size: 1.4em;
 }
-
-
 
 body > div {
     padding-top: 1em;

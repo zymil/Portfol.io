@@ -1,6 +1,14 @@
 <?php 
-    include_once('../data/connect.php');
+
+    include_once('../database/connect.php');
     include_once('../cookies/cookie.php');
+
+
+    if(!isset($_SESSION['username']) ) {
+        $_SESSION['message'] = 'Please Login first!';
+        header('Location: login.php');
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +23,6 @@
 <body>
     <header>
         <h1>Portfol.io</h1>
-        <!-- <img src="../img/rememberthealt.png" alt="good job"> -->
     </header>
     <div id="content">
         <?php if (isset($_SESSION['message'])) { ?>
@@ -29,9 +36,9 @@
             Hard Work </br>
             pays-off </br></h2>
         </section>
-        <section id="aboutBranch">
+        <section id="Exemplo">
             <h2>Exemplo</h2>
-            <div id="aboutBranchList">
+            <div id="ex">
               
             </div>
         </section>

@@ -1,8 +1,11 @@
 <?php 
-
+  include_once('../cookies/cookie.php');
   include_once('../database/accounts.php');
   include_once('../database/connect.php');
-  include_once('../cookies/cookie.php');
+
+
+
+
 
     /*zero segurança xD  vamos ter que fazer tanto metodo
     inserir aqui sql methods para verificar users, vamos fazer
@@ -21,15 +24,13 @@
 
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $_SESSION['username'] = $username;
-
 
     /*aqui vai estar uns quantos IF's para decidir que tipo de user é
     para já so da para o user
     */
     if (checkStudent($username, $password)) {
       $_SESSION['username'] = $username;
-      header('Location: ../pages/yes.php'); 
+      header('Location: ../pages/user_mainpage.php'); 
     } else {
       header('Location: ../pages/no.php');
     }
