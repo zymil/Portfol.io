@@ -32,7 +32,7 @@
              if you want to do so of course !</p>
         </h2>
     </article>
-    <form action="../actions/ActionRegistration.php" method="POST">
+    <form action="../actions/ActionStudentRegistration.php" method="POST">
         <h3>Register now!</h3>
         <?php if (isset($_SESSION['message'])) { ?>
             <div class="message">
