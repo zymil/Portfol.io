@@ -21,14 +21,14 @@
         $_SESSION['username'] = $username;
         $_SESSION['message'] = 'Registration Successful!';
         header("Location: ../pages/login.php");
-    } catch(PDOException $e) {
-        if (strpos($e->getMessage(), 'student.username') !== false)
-            $_SESSION['message'] = 'Username already exists!';
-        else
-            $_SESSION['message'] = 'Registration failed!';
-        header('Location: ../pages/student_registration.php');
-    }
-} 
-else $_SESSION['message'] = 'Passwords have to match and you must fill all boxes!';
+        } catch(PDOException $e) {
+            if (strpos($e->getMessage(), 'student.username') !== false)
+                $_SESSION['message'] = 'Username already exists!';
+            else
+                $_SESSION['message'] = 'Registration failed!';
+            header('Location: ../pages/student_registration.php');
+        }
+    } 
+    else $_SESSION['message'] = 'Passwords have to match and you must fill all boxes!';
 
 ?>

@@ -1,9 +1,16 @@
 <?php
 
-    function addSubject($subject_name, $student_id, $folder_path) {
+    function checkSubjectExistance($subject_name) {
+        global $db;  
+        $stmt = $db->prepare('SELECT * FROM student WHERE username = ?');
+        $stmt->execute(array($subject_name));
+        return ($stmt->fetch());
+    }   
+
+    function addSubject($subject_name, $admin_id, $folder_path) {
         global $db;
-        $stmt = $db->prepare('INSERT INTO subject (name, folder_path, admin_id) VALUES (?, ?, ?)');
-        $stmt->execute(array($subject_name, $folder_path, $student_id));
+        $stmt = $db->prepare('INSERT INTO subject (name, admin_id, folder_path) VALUES (?, ?, ?)');
+        $stmt->execute(array($subject_name, $admin_id, $folder_path));
         return ($stmt->fetch());
     }
 

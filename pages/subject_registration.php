@@ -45,7 +45,7 @@
                 </div>
             <?php unset($_SESSION['message']); } ?>
         <label>
-            Subject Name:  <input type="text" name="subject"> 
+            Subject Name:  <input type="text" name="subject_name"> 
         </label>
         <p></p>
         <input type="submit" value="Submit">

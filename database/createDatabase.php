@@ -37,7 +37,9 @@ $db->exec('
     	id integer primary key autoincrement,
     	name text not null,
     	folder_path text,
-    	admin_id integer references student(id) not null
+        admin_id integer references student(id) not null,
+        CONSTRAINT user_unique_error UNIQUE (name)
+        CONSTRAINT user_unique_error UNIQUE (folder_path)
     );
 
     insert into subject (name, folder_path, admin_id) values ("SIBD", "/SIBD", 1);
