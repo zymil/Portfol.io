@@ -1,6 +1,6 @@
 <?php 
     include_once('../database/connect.php');
-    include_once('../database/accounts.php');
+    include_once('../database/students.php');
     include_once('../cookies/cookie.php');
 
     if($_POST['password'] === $_POST['password_confirmation'])
