@@ -22,7 +22,8 @@ $db->exec('
         username text not null,
         password text not null,
         email text not null,
-    	CONSTRAINT user_unique_error UNIQUE (email)
+        CONSTRAINT user_unique_error UNIQUE (email)
+        CONSTRAINT user_unique_error UNIQUE (username)
     );
 
     insert into student (username, password, email) values ("pudim", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "josepinhal2@mail.com");

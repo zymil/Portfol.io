@@ -1,3 +1,4 @@
+
 body{
     font-family: Arial, Verdana, monospace;
     background-repeat: no-repeat;
@@ -8,7 +9,13 @@ body{
     -webkit-font-smoothing: antialiased;
     margin-left: 10em;
 }
+a{
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+}
 body > header{
+
     font-size: 2.1em;
     border-style: solid;
     flex-direction: column;
@@ -27,6 +34,27 @@ body > header{
     font-family: "Lucida Handwriting";
     display: flex;
 }
+body > div{
+    font-size: 1.1em;
+    flex-direction: column;
+    text-align: right;
+
+}
+a:-webkit-any-link#Add {
+    padding: 0.6em;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+}
+a:-webkit-any-link#Admin {
+    padding: 0.6em;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+}
+a:-webkit-any-link#Back {
+    padding: 0.6em;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+}
 body > footer{
     text-align: right;
     font-size: 0.65em;
@@ -37,5 +65,10 @@ body > footer{
     margin: 0;
     margin-top: 35em;
     margin-right: 5em;
+}
 
+body > div#username a{
+    padding: 0.6em;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
 }

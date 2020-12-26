@@ -1,10 +1,9 @@
 <?php 
-/*php comenta diferente! test*/
+    include_once('../cookies/cookie.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- É assim que se comenta, vai adicionando notas! -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/LoginStyle.css" rel="stylesheet">
@@ -14,7 +13,6 @@
 <body>
     <header>
         <h1>Portfol.io</h1>
-        <!-- <img src="../img/rememberthealt.png" alt="good job"> -->
     </header>
     <article>
         <h2>
@@ -26,7 +24,7 @@
              if you want to do so of course !)</p>
         </h2>
     </article>
-    <form action="../actions/ActionLogin.php" method="post">
+    <form action="../actions/ActionLogin.php" method="POST">
         
         <h3>Log in</h3>
         <label>

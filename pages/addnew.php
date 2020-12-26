@@ -35,8 +35,8 @@
         <a href="../actions/ActionLogout.php">Logout</a>
     </div>
     <nav id="operations">
-        <a href="../pages/addnew.php" id="Add">Add new Portfolio</a>
-        <a href="../pages/admin.php" id="Admin">Admin Tools</a>
+        <a href="../pages/user_mainpage.php" id="Back">Go back</a>
+        
 
     </nav>
     <section id="welcome">
@@ -46,28 +46,15 @@
             pays-off </br>
         </h2>
     </section>
-    <section id="accountInfo"> 
-        <h3><?=$_SESSION['username']?>'s Portfolio:</h3>
+        <section id="accountInfo"> 
+            <h3><?=$_SESSION['username']?>'s Portfolio:</h3>
+       
+            <!-- Aqui entra o menu dinamico que apresenta as cadeiras adicionadas -->
+
+
+
+        </section> 
         
-    </section> 
-    <!-- Aqui entra o menu dinamico que apresenta as cadeiras adicionadas -->
-        
-    <form action="../actions/ActionUpload.php" method="post" enctype="multipart/form-data">
-        Select image to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload Image" name="submit">
-    </form>
-
-
-
-
-
-
-
-
-
-
-
         <!-- <section id="Exemplo">
             <h2>Exemplo</h2>
             <div id="ex">

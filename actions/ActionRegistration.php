@@ -1,7 +1,6 @@
 <?php 
-
-    include_once('../database/accounts.php');
     include_once('../database/connect.php');
+    include_once('../database/accounts.php');
     include_once('../cookies/cookie.php');
 
     if($_POST['password'] === $_POST['password_confirmation'])
@@ -10,21 +9,26 @@
       $password = $_POST['password'];
       $email    = $_POST['email'];
 
-      if(!checkStudentExistance($username)) {
-        if(!addStudent($username, $password, $email)) {
-          header("Location: ../pages/login.php");
-        } 
-        else {
-          echo ("add error");
-        }
-      } 
-      else {
-        echo ("username exists");
-        $_SESSION['message'] = 'Username already taken!';
+      if(strlen($password) < 4){
+        $_SESSION['message'] = 'Password too short';
+        header('Location: ../pages/registration.php');
+        die();
       }
+
+      try {
+        addStudent($username, $password, $email);
+        include_once('../cookies/cookie.php');
+        $_SESSION['username'] = $username;
+        $_SESSION['message'] = 'Registration Successful!';
+        header("Location: ../pages/login.php");
+    } catch(PDOException $e) {
+        if (strpos($e->getMessage(), 'student.username') !== false)
+            $_SESSION['message'] = 'Username already exists!';
+        else
+            $_SESSION['message'] = 'Registration failed!';
+        header('Location: ../pages/registration.php');
     }
-    else {
-      echo ("pw not same");
-      $_SESSION['message'] = 'Passwords must match!';
-    }
+} 
+else $_SESSION['message'] = 'Passwords have to match and you must fill all boxes!';
+
 ?>

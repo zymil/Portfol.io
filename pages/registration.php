@@ -1,5 +1,11 @@
 <?php 
-/*php comenta diferente! test*/
+    include_once('../database/connect.php');
+    include_once('../cookies/cookie.php');
+
+
+    if(!isset($_SESSION['username']) ) {
+        header('Location: login.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -14,6 +14,7 @@ create table student (
 	password text not null,
     email text not null,
 	CONSTRAINT user_unique_error UNIQUE (email)
+	CONSTRAINT user_unique_error UNIQUE (username)
 );
 
 insert into student (username, email) values ('José Pinhal', 'josepinhal@mail.com');
