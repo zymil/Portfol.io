@@ -10,8 +10,6 @@
 
     $folder_path = NULL; // PASTA
 
-
-
     if(strlen($subject_name) < 3){
     $_SESSION['message'] = 'Name too short';
     header('Location: ../pages/subject_registration.php');

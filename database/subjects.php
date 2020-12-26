@@ -36,4 +36,11 @@
 
         return ($stmt->fetch());
     }
+    function getSubjects() {
+        global $db;
+        $stmt= $db->prepare('SELECT * from subject');
+        $stmt->execute();
+
+        return ($stmt->fetch());
+    }
 ?>

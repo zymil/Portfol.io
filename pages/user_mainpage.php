@@ -2,11 +2,15 @@
 
     include_once('../database/connect.php');
     include_once('../cookies/cookie.php');
+    include_once('../database/students.php');
+    include_once('../database/subjects.php');
 
     if(!isset($_SESSION['username']) ) {
         $_SESSION['message'] = 'Please Login first!';
         header('Location: login.php');
     }
+    $username=$_SESSION['username'];
+    $result=getSubjects();
 
 ?>
 <!DOCTYPE html>
@@ -43,9 +47,15 @@
             pays-off </br>
         </h2>
     </section>
-    <section id="accountInfo"> 
+    <section id="subjects"> 
         <h3><?=$_SESSION['username']?>'s Portfolio:</h3>
-        
+        <ul>
+            <?php foreach ($result as $column){ ?>
+                <li>
+                    <a href=""><?php echo $column["name"] ?></a>
+                </li>
+            <?php } ?>
+        </ul>
     </section> 
     <!-- Aqui entra o menu dinamico que apresenta as cadeiras adicionadas -->
         
@@ -54,11 +64,6 @@
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Upload Image" name="submit">
     </form>
-
-
-
-
-
 
 
 
