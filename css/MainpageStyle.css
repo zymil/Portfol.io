@@ -7,13 +7,10 @@ body{
     background-position: auto;
     background-image: url(../img/portfolio4.png);
     -webkit-font-smoothing: antialiased;
-    margin-left: 10em;
+    margin-left: 5em;
+    margin-right: 5em;
 }
-a{
-    color: black;
-    text-decoration: none;
-    background-color: transparent;
-}
+
 body > header{
 
     font-size: 2.1em;
@@ -61,14 +58,19 @@ body > footer{
     margin: auto;
     display: block;
     margin-top: 10em;
-    list-style-type: none;
+    text-decoration: none;
     margin: 0;
     margin-top: 35em;
-    margin-right: 5em;
+    margin-right: -5em;
 }
 
 body > div#username a{
     padding: 0.6em;
     background: rgb(0, 0, 0);
     color: #ffffff;
+}
+a{
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
 }

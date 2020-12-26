@@ -12,12 +12,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- É assim que se comenta, vai adicionando notas! -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/MainpageStyle.css" rel="stylesheet">
     <title> Portfol.io </title>
-    
 </head>
 
 <body>
@@ -37,7 +35,6 @@
     <nav id="operations">
         <a href="../pages/addnew.php" id="Add">Add new Portfolio</a>
         <a href="../pages/admin.php" id="Admin">Admin Tools</a>
-
     </nav>
     <section id="welcome">
         <h2>Hi there! </br>
