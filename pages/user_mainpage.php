@@ -33,7 +33,7 @@
         <a href="../actions/ActionLogout.php">Logout</a>
     </div>
     <nav id="operations">
-        <a href="../pages/addnew.php" id="Add">Add new Portfolio</a>
+        <a href="../pages/addnew.php" id="Add">Add new Subject</a>
         <a href="../pages/admin.php" id="Admin">Admin Tools</a>
     </nav>
     <section id="welcome">

@@ -36,18 +36,23 @@
     </div>
     <nav id="operations">
         <a href="../pages/user_mainpage.php" id="Back">Go back</a>
-        
-
     </nav>
-    <section id="welcome">
-        <h2>Hi there! </br>
-            Remember, </br>
-            Hard Work </br>
-            pays-off </br>
-        </h2>
-    </section>
-        <section id="accountInfo"> 
-            <h3><?=$_SESSION['username']?>'s Portfolio:</h3>
+    <form action="../actions/ActionSubjectRegistration.php" method="POST">
+        <h3>Add a new Subject to you Portfolio!</h3>
+            <?php if (isset($_SESSION['message'])) { ?>
+                <div class="message">
+                    <?=$_SESSION['message']?>
+                </div>
+            <?php unset($_SESSION['message']); } ?>
+        <label>
+            Subject Name:  <input type="text" name="subject"> 
+        </label>
+        <p></p>
+        <input type="submit" value="Submit">
+    </form>
+
+        <section id="usersubjects"> 
+            <h3><?=$_SESSION['username']?>'s Subjects:</h3>
        
             <!-- Aqui entra o menu dinamico que apresenta as cadeiras adicionadas -->
 
