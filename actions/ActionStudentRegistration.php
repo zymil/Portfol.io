@@ -11,7 +11,7 @@
 
       if(strlen($password) < 4){
         $_SESSION['message'] = 'Password too short';
-        header('Location: ../pages/registration.php');
+        header('Location: ../pages/student_registration.php');
         die();
       }
 
@@ -26,7 +26,7 @@
             $_SESSION['message'] = 'Username already exists!';
         else
             $_SESSION['message'] = 'Registration failed!';
-        header('Location: ../pages/registration.php');
+        header('Location: ../pages/student_registration.php');
     }
 } 
 else $_SESSION['message'] = 'Passwords have to match and you must fill all boxes!';

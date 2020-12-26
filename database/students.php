@@ -5,15 +5,14 @@
         $stmt = $db->prepare('SELECT * FROM student WHERE username = ?');
         $stmt->execute(array($username));
         $user = $stmt->fetch();
-        return ($user == true && password_verify($password, $user['password']));
+        return (($user == true) && password_verify($password, $user['password']));
     }
 
     function checkStudentExistance($username) {
         global $db;  
         $stmt = $db->prepare('SELECT * FROM student WHERE username = ?');
         $stmt->execute(array($username));
-        $user = $stmt->fetch();
-        return ($user == true);
+        return ($stmt->fetch());
     }
 
     function addStudent($username, $password, $email) {
@@ -21,8 +20,7 @@
         $password_hashed = password_hash($password, PASSWORD_DEFAULT);
         $stmt = $db->prepare('INSERT INTO student (username, password, email) VALUES (?, ?, ?)');
         $stmt->execute(array($username, $password_hashed, $email));
-        $output = $stmt->fetch();
-        return ($output == true);
+        return ($stmt->fetch());
     }
 
 ?>

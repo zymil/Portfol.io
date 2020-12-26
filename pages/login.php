@@ -37,7 +37,7 @@
     </form>
     <div id="newUser">
         New User?
-        <form action="registration.php">
+        <form action="student_registration.php">
             <input type="submit" value="Sign Up">
         </form>
     </div>

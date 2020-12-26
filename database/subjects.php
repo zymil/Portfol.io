@@ -1,28 +1,32 @@
 <?php
 
-    function checkStudent($username, $password) {
-        global $db;  
-        $stmt = $db->prepare('SELECT * FROM student WHERE username = ?');
-        $stmt->execute(array($username));
-        $user = $stmt->fetch();
-        return ($user == true && password_verify($password, $user['password']));
-    }
-
-    function checkStudentExistance($username) {
-        global $db;  
-        $stmt = $db->prepare('SELECT * FROM student WHERE username = ?');
-        $stmt->execute(array($username));
-        $user = $stmt->fetch();
-        return ($user == true);
-    }
-
-    function addStudent($username, $password, $email) {
+    function addSubject($subject_name, $student_id, $folder_path) {
         global $db;
-        $password_hashed = password_hash($password, PASSWORD_DEFAULT);
-        $stmt = $db->prepare('INSERT INTO student (username, password, email) VALUES (?, ?, ?)');
-        $stmt->execute(array($username, $password_hashed, $email));
-        $output = $stmt->fetch();
-        return ($output == true);
+        $stmt = $db->prepare('INSERT INTO subject (name, folder_path, admin_id) VALUES (?, ?, ?)');
+        $stmt->execute(array($subject_name, $folder_path, $student_id));
+        return ($stmt->fetch());
     }
 
+    function getNumberOfSubjects() {
+        global $db;  
+        $stmt = $db->prepare('SELECT COUNT(*) FROM subject');
+        $stmt->execute();
+        return ($stmt->fetch());
+    }
+
+    function getFolderPathFromName($subject_name) {
+        global $db;
+        $stmt= $db->prepare('SELECT folder_path from subject where name = ?');
+        $stmt->execute(array($subject_name));
+
+        return ($stmt->fetch());
+    }
+
+    function getFolderPathFromID($admin_id){
+        global $db;
+        $stmt= $db->prepare('SELECT folder_path from subject where id = ?');
+        $stmt->execute(array($admin_id));
+
+        return ($stmt->fetch());
+    }
 ?>
