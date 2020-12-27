@@ -1,0 +1,30 @@
+#subjects ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none; 
+    flex-wrap: wrap;
+}    
+#subjects li{
+    padding: 2em;
+    margin-bottom: 3.5em;
+}   
+a#subs{
+    padding: 1.1em;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 15%;
+    border-bottom: rgb(255, 255, 89);
+    border-bottom-width: 4em;
+    border-style: solid;
+    box-shadow: 0pt 0pt 0pt 2pt black;
+    margin-bottom: 20px; 
+}
+a#subs:hover{
+
+background-color: yellow;
+opacity: 90%;
+color: black;
+font-weight: bold;
+
+}

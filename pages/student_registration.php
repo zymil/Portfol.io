@@ -3,14 +3,14 @@
     include_once('../cookies/cookie.php');
 
 
-    if(isset($_SESSION['username']) ) {
+    if(!isset($_SESSION['username']) ) {
         header('Location: login.php');
     }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- É assim que se comenta, vai adicionando notas! -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/RegistryStyle.css" rel="stylesheet">
@@ -20,7 +20,6 @@
 <body>
     <header>
         <h1>Portfol.io</h1>
-        <!-- <img src="../img/rememberthealt.png" alt="good job"> -->
     </header>
     <article>
         <h2>

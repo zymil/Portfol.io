@@ -20,6 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/MainpageStyle.css" rel="stylesheet">
+    <link href="../css/SubjectsStyle.css" rel="stylesheet">
     <title> Portfol.io </title>
 </head>
 
@@ -47,17 +48,16 @@
             pays-off </br>
         </h2>
     </section>
-    <section id="subjects"> 
+    <nav id="subjects"> 
         <h3><?=$_SESSION['username']?>'s Portfolio:</h3>
         <ul>
             <?php foreach ($result as $row){ ?>
-                
                 <li>
-                    <a href="list_gallery.php?subject=<?php echo $row['id'] ?>"><?php echo $row["name"] ?></a>
+                    <a href="list_gallery.php?subject=<?php echo $row['id'] ?>"id="subs"><?php echo $row["name"] ?></a>
                 </li>
             <?php } ?>
         </ul>
-    </section>
+    </nav>
       
     <footer>
         <a href="https://github.com/zymil/Portfolio">@github/Projeto</a>
