@@ -82,11 +82,10 @@ $db->exec('
     
     
     create table photo (
-    	id integer primary key autoincrement,
-    	week_portfolio_id integer references week_portfolio(id) not null
+        id integer primary key autoincrement,
+        photo_path text not null,
+    	subject_id integer references subject(id) not null
     );
-
-    insert into photo (week_portfolio_id) values (1);
 
 
 
