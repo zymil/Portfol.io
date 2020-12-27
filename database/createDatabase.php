@@ -1,5 +1,7 @@
 <?php
 
+include_once('../cookies/cookie.php');
+
 $db = new SQLite3("db.db");
 $caught = false;
 
@@ -84,12 +86,13 @@ $db->exec('
     create table photo (
         id integer primary key autoincrement,
         name text not null,
-    	subject_id integer references subject(id) not null
+        subject_id integer references subject(id) not null,
+        created_at timestamp DEFAULT CURRENT_TIMESTAMP not null
     );
 
-    insert into photo (name, subject_id) values (1, 1);
-    insert into photo (name, subject_id) values (2, 1);
-    insert into photo (name, subject_id) values (3, 2);
+    insert into photo (name, subject_id) values ("1.jpg", 1);
+    insert into photo (name, subject_id) values ("2.jpg", 1);
+    insert into photo (name, subject_id) values ("3.jpg", 2);
 
 
     COMMIT TRANSACTION;
@@ -103,6 +106,7 @@ $db->exec('
 }
 //Nice acho que já funciona, so falta o sql
 if(!$caught){
-    echo ("The Database was created successfully ");
+    $_SESSION['message'] = 'The Database was created successfully!';
+    header('Location: ../pages/login.php');
 }
 ?>

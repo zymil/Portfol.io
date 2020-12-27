@@ -1,5 +1,10 @@
 <?php 
     include_once('../cookies/cookie.php');
+
+    if(isset($_SESSION['username']) ) {
+        header('Location: user_mainpage.php');
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +32,12 @@
     <form action="../actions/ActionLogin.php" method="POST">
         
         <h3>Log in</h3>
+        <?php if (isset($_SESSION['message'])) { ?>
+            <div class="message">
+                <?=$_SESSION['message']?>
+            </div>
+        <?php unset($_SESSION['message']); } ?>
+        <p></p>
         <label>
             User Name <input type="text" name="username">
         <p></p>

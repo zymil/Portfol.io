@@ -1,5 +1,11 @@
 <?php
 
+  include_once('../database/connect.php');
+  include_once('../cookies/cookie.php');
+  include_once('../database/students.php');
+  include_once('../database/subjects.php');
+  include_once('../database/photos.php');
+
 $subject_id = $_POST['subject_id'];
 
 $main_dir = "../pictures/";
@@ -59,6 +65,7 @@ if ($uploadOk == 0) {
   session_start();
   if (move_uploaded_file($_FILES["photoToUpload"]["tmp_name"], $target_file)) {
     $_SESSION['message'] = "The file ". htmlspecialchars( basename( $_FILES["photoToUpload"]["name"])). " has been uploaded.";
+    addPhoto(basename($_FILES["photoToUpload"]["name"]), $subject_id);
     header($goBackPath);
   } else {
     $_SESSION['message'] = "Sorry, there was an error uploading your file.";

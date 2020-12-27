@@ -51,11 +51,6 @@
         <input type="submit" value="Submit">
     </form>
 
-        <section id="usersubjects"> 
-            <h3><?=$_SESSION['username']?>'s Subjects:</h3>
-            <!-- Aqui entra o menu dinamico que apresenta as cadeiras adicionadas -->
-        </section> 
-
     <footer>
         <a href="https://github.com/zymil/Portfolio">@github/Projeto</a>
         <p>Copyright &copy; Grupo L, 2020</p>

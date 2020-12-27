@@ -65,7 +65,7 @@
         <section class="list">
             <?php foreach($result as $row) { ?>
                 <article>
-                    <img src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>.jpg" alt="Mountain">
+                    <img src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>" alt="Picture">
                     <span><?php echo $row["name"]?></span>
                 </article>
 

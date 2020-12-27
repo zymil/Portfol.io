@@ -11,6 +11,7 @@
       $_SESSION['username'] = $username;
       header('Location: ../pages/user_mainpage.php'); 
     } else {
+      $_SESSION['message'] = 'Login Failed';
       header('Location: ../pages/login.php');
     }
 ?>

@@ -3,8 +3,8 @@
     include_once('../cookies/cookie.php');
 
 
-    if(!isset($_SESSION['username']) ) {
-        header('Location: login.php');
+    if(isset($_SESSION['username']) ) {
+        header('Location: user_mainpage.php');
     }
 ?>
 <!DOCTYPE html>
