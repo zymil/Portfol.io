@@ -42,6 +42,7 @@ body > header h1 a:-webkit-any-link {
     padding: 0.6em;
     background: rgb(0, 0, 0);
     color: #ffffff;
+    border-radius: 7%;
 }
 
 body > footer{

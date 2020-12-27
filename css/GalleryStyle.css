@@ -1,0 +1,23 @@
+#pictures ul{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(5, minmax(1px, 100%));
+    padding-left: 0;
+    list-style: none; 
+}    
+#pictures li{
+    padding: 1em;
+    margin-bottom: 3.5em;
+}   
+img#pics{
+    max-width:100%;
+    height:auto;
+}
+a#subs:hover{
+
+background-color: rgb(48, 48, 48);
+opacity: 90%;
+color: rgb(255, 255, 255);
+font-weight: bold;
+
+}

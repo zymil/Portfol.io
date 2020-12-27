@@ -25,6 +25,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/MainpageStyle.css" rel="stylesheet">
+    <link href="../css/GalleryStyle.css" rel="stylesheet">
     <title> Portfol.io </title>
 </head>
 
@@ -59,21 +60,17 @@
         <input type="submit" value="Upload Image" name="submit">
     </form>
     
-    <section id="pictures"> 
+    <nav id="pictures"> 
         <h3><?php echo $subject_name ?>'s Portfolio:</h3>
-
-        <section class="list">
+        <ul>
             <?php foreach($result as $row) { ?>
-                <article>
-                    <img src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>" alt="Picture">
+                <li>
+                    <img id="pics" src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"  alt="Picture">
                     <span><?php echo $row["name"]?></span>
-                </article>
-
+                </li>
             <?php } ?>
-
-        </section>
-
-    </section> 
+        </ul>
+    </nav> 
    
         
     

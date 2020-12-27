@@ -49,7 +49,7 @@
         </h2>
     </section>
     <nav id="subjects"> 
-        <h3><?=$_SESSION['username']?>'s Portfolio:</h3>
+        <h3><?=$_SESSION['username']?>'s Portfolios:</h3>
         <ul>
             <?php foreach ($result as $row){ ?>
                 <li>
@@ -58,7 +58,6 @@
             <?php } ?>
         </ul>
     </nav>
-      
     <footer>
         <a href="https://github.com/zymil/Portfolio">@github/Projeto</a>
         <p>Copyright &copy; Grupo L, 2020</p>

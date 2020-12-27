@@ -13,18 +13,18 @@ a#subs{
     background: rgb(0, 0, 0);
     color: #ffffff;
     text-decoration: none;
-    border-radius: 15%;
-    border-bottom: rgb(255, 255, 89);
-    border-bottom-width: 4em;
+    border-radius: 8%;
+    border-bottom: #8C2D19;
+    border-bottom-width: 10em;
     border-style: solid;
     box-shadow: 0pt 0pt 0pt 2pt black;
     margin-bottom: 20px; 
 }
 a#subs:hover{
 
-background-color: yellow;
+background-color: rgb(48, 48, 48);
 opacity: 90%;
-color: black;
+color: rgb(255, 255, 255);
 font-weight: bold;
 
 }
