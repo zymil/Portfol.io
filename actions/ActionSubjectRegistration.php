@@ -25,8 +25,8 @@
         if (strpos($e->getMessage(), 'subject.name') !== false)
             $_SESSION['message'] = 'Subject already exists!';
         else
-            $_SESSION['message'] = $admin_username;
-         header('Location: ../pages/subject_registration.php');
+            $_SESSION['message'] = 'Registration Successful!';
+        header('Location: ../pages/subject_registration.php');
     }
 
     
