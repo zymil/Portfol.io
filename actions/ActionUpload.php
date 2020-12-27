@@ -65,7 +65,7 @@ if ($uploadOk == 0) {
   session_start();
   if (move_uploaded_file($_FILES["photoToUpload"]["tmp_name"], $target_file)) {
     $_SESSION['message'] = "The file ". htmlspecialchars( basename( $_FILES["photoToUpload"]["name"])). " has been uploaded.";
-    addPhoto(basename($_FILES["photoToUpload"]["name"]), $subject_id);
+    addPhoto(basename($_FILES["photoToUpload"]["name"]), $subject_id, getStudentIdFromUsername($_SESSION['username']));
     header($goBackPath);
   } else {
     $_SESSION['message'] = "Sorry, there was an error uploading your file.";

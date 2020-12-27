@@ -87,12 +87,13 @@ $db->exec('
         id integer primary key autoincrement,
         name text not null,
         subject_id integer references subject(id) not null,
+        student_id integer references student(id) not null,
         created_at timestamp DEFAULT CURRENT_TIMESTAMP not null
     );
 
-    insert into photo (name, subject_id) values ("1.jpg", 1);
-    insert into photo (name, subject_id) values ("2.jpg", 1);
-    insert into photo (name, subject_id) values ("3.jpg", 2);
+    insert into photo (name, subject_id, student_id) values ("1.jpg", 1, 2);
+    insert into photo (name, subject_id, student_id) values ("2.jpg", 1, 1);
+    insert into photo (name, subject_id, student_id) values ("3.jpg", 2, 3);
 
 
     COMMIT TRANSACTION;
