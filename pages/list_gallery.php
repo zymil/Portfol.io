@@ -11,13 +11,8 @@
         header('Location: login.php');
     }
     $subject_id=$_GET['subject'];
-    //echo $subject_id;
     $subject_name=getSubjectNameFromID($subject_id);
-    //echo $subject_name;
     $result=getSubjectPhotos($subject_id);
-    echo $result;
-    var_dump($result);
-    print_r($result);
 
     $username=$_SESSION['username'];
 
@@ -51,6 +46,7 @@
 
     <nav id="operations">
         <a href="user_mainpage.php" id="Back">Go back</a>
+        <a href="../pages/admin.php" id="Admin">Admin Tools</a>
     </nav>
     <p></p>
     <p></p>
@@ -66,8 +62,8 @@
         <section class="list">
             <?php foreach($result as $row) { ?>
                 <article>
-                    <img src="pictures/<?php echo $subject_name ?>/<?php $row['name'] ?>.jpg" alt="">
-                    <span><?php echo $row["id"]?></span>
+                    <img src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>.jpg" alt="Mountain">
+                    <span><?php echo $row["name"]?></span>
                 </article>
 
             <?php } ?>

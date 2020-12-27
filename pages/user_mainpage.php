@@ -39,7 +39,6 @@
     </div>
     <nav id="operations">
         <a href="../pages/subject_registration.php" id="Add">Add new Subject</a>
-        <a href="../pages/admin.php" id="Admin">Admin Tools</a>
     </nav>
     <section id="welcome">
         <h2>Hi there! </br>
@@ -58,27 +57,7 @@
                 </li>
             <?php } ?>
         </ul>
-    </section> 
-    <!-- Aqui entra o menu dinamico que apresenta as cadeiras adicionadas -->
-        
-    <form action="../actions/ActionUpload.php" method="post" enctype="multipart/form-data">
-        Select image to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload Image" name="submit">
-    </form>
-
-
-
-
-
-
-        <!-- <section id="Exemplo">
-            <h2>Exemplo</h2>
-            <div id="ex">
-              
-            </div>
-        </section> -->
-
+    </section>
       
     <footer>
         <a href="https://github.com/zymil/Portfolio">@github/Projeto</a>

@@ -1,9 +1,9 @@
 <?php
 
-    function addPhoto($photo_path, $subject_id) {
+    function addPhoto($name, $subject_id) {
         global $db;
-        $stmt = $db->prepare('INSERT INTO photo (photo_path, subject_id) VALUES (?, ?, ?)');
-        $stmt->execute(array($photo_path, $subject_id));
+        $stmt = $db->prepare('INSERT INTO photo (name, subject_id) VALUES (?, ?)');
+        $stmt->execute(array($name, $subject_id));
         return ($stmt->fetch());
     }
 
