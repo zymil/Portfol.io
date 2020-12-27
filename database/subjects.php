@@ -21,21 +21,22 @@
         return ($stmt->fetch());
     }
 
-    function getFolderPathFromName($subject_name) {
+    function getSubjectNameFromID($admin_id){
         global $db;
-        $stmt= $db->prepare('SELECT folder_path from subject where name = ?');
+        $stmt= $db->prepare('SELECT name from subject where id = ?');
+        $stmt->execute(array($admin_id));
+
+        return ($stmt->fetch());
+    }
+
+    function getSubjectIDFromName($subject_name){
+        global $db;
+        $stmt= $db->prepare('SELECT id from subject where name = ?');
         $stmt->execute(array($subject_name));
 
         return ($stmt->fetch());
     }
 
-    function getFolderPathFromID($admin_id){
-        global $db;
-        $stmt= $db->prepare('SELECT folder_path from subject where id = ?');
-        $stmt->execute(array($admin_id));
-
-        return ($stmt->fetch());
-    }
     function getSubjects() {
         global $db;
         $stmt= $db->prepare('SELECT * from subject');
@@ -43,4 +44,5 @@
 
         return ($stmt->fetchAll());
     }
+    
 ?>
