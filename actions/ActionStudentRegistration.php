@@ -32,5 +32,6 @@
         }
     } 
     else $_SESSION['message'] = 'Passwords have to match and you must fill all boxes!';
+    header('Location: ../pages/student_registration.php');
 
 ?>

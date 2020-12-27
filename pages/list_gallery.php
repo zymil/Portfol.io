@@ -32,11 +32,6 @@
     <header>
         <h1><a href="../pages/user_mainpage.php"> Portfol.io</a></h1>
     </header>
-    <?php if (isset($_SESSION['message'])) { ?>
-        <div class="message">
-            <?=$_SESSION['message']?>
-        </div>
-    <?php unset($_SESSION['message']); } ?>
     
     <div id="username">
         <p>Logged in as: <?= $_SESSION['username'] ?></p>
@@ -51,8 +46,16 @@
     <p></p>
     <p></p>
     <form action="../actions/ActionUpload.php" method="post" enctype="multipart/form-data">
-        Select image to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload">
+
+        <?php if (isset($_SESSION['message'])) { ?>
+            <div class="message">
+                <?=$_SESSION['message']?>
+            </div>
+        <?php unset($_SESSION['message']); } ?>
+
+        <input type="hidden" name="subject_name" value="<?php echo $subject_name ?>" >
+        <input type="hidden" name="subject_id" value="<?php echo $subject_id ?>" >
+        <input type="file" name="photoToUpload" id="photoToUpload">
         <input type="submit" value="Upload Image" name="submit">
     </form>
     

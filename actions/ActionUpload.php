@@ -1,49 +1,68 @@
 <?php
-$target_dir = "../pictures/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+
+$subject_id = $_POST['subject_id'];
+
+$main_dir = "../pictures/";
+$subject_name = $_POST['subject_name'];
+$goBackPath = "Location: ../pages/list_gallery.php?subject=" . $subject_id;
+
+$full_path = $main_dir . $subject_name . "/";
+
+if (!file_exists($full_path)) {
+  mkdir($full_path, 0777, true);
+}
+
+$target_file = $full_path . basename($_FILES["photoToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
+
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
-  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+  $check = getimagesize($_FILES["photoToUpload"]["tmp_name"]);
   if($check !== false) {
-    echo "File is an image - " . $check["mime"] . ".";
+    $_SESSION['message'] = "File is an image - " . $check["mime"] . ".";
     $uploadOk = 1;
   } else {
-    echo "File is not an image.";
+    $_SESSION['message'] = "File is not an image.";
     $uploadOk = 0;
   }
 }
 
 // Check if file already exists
 if (file_exists($target_file)) {
-  echo "Sorry, file already exists.";
+  session_start();
+  $_SESSION['message'] = "Sorry, file already exists.";
   $uploadOk = 0;
 }
 
 // Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-  echo "Sorry, your file is too large.";
+if ($_FILES["photoToUpload"]["size"] > 500000) {
+  session_start();
+  $_SESSION['message'] = "Sorry, your file is too large.";
   $uploadOk = 0;
 }
 
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" ) {
-  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+  session_start();
+  $_SESSION['message'] = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
   $uploadOk = 0;
 }
 
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-  echo "Sorry, your file was not uploaded.";
+  header($goBackPath);
 // if everything is ok, try to upload file
 } else {
-  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+  session_start();
+  if (move_uploaded_file($_FILES["photoToUpload"]["tmp_name"], $target_file)) {
+    $_SESSION['message'] = "The file ". htmlspecialchars( basename( $_FILES["photoToUpload"]["name"])). " has been uploaded.";
+    header($goBackPath);
   } else {
-    echo "Sorry, there was an error uploading your file.";
+    $_SESSION['message'] = "Sorry, there was an error uploading your file.";
+    header($goBackPath);
   }
 }
 ?>
