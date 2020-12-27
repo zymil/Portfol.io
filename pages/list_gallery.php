@@ -65,7 +65,7 @@
         <ul>
             <?php foreach($result as $row) { ?>
                 <li>
-                    <img id="pics" src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"  alt="Picture">
+                    <a href="https://github.com/zymil/Portfolio"><img id="pics" src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"  alt="Picture"></a>
                     <span><?php echo $row["name"]?></span>
                 </li>
             <?php } ?>

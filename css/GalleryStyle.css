@@ -1,7 +1,7 @@
 #pictures ul{
     display: grid;
     grid-gap: 1em;
-    grid-template-columns: repeat(5, minmax(1px, 100%));
+    grid-template-columns: repeat(6, minmax(1px, 100%));
     padding-left: 0;
     list-style: none; 
 }    
@@ -12,6 +12,12 @@
 img#pics{
     max-width:100%;
     height:auto;
+    transition: transform .2s;
+}
+img#pics:hover{
+    max-width:100%;
+    height:auto;
+    transform: scale(2);
 }
 a#subs:hover{
 
