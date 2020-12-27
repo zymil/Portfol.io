@@ -87,6 +87,9 @@ $db->exec('
     	subject_id integer references subject(id) not null
     );
 
+    insert into photo (name, subject_id) values (1, 1);
+    insert into photo (name, subject_id) values (2, 1);
+    insert into photo (name, subject_id) values (3, 2);
 
 
     COMMIT TRANSACTION;
