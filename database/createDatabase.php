@@ -83,7 +83,7 @@ $db->exec('
     
     create table photo (
         id integer primary key autoincrement,
-        photo_path text not null,
+        name text not null,
     	subject_id integer references subject(id) not null
     );
 
