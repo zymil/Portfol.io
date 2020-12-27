@@ -24,6 +24,8 @@
         } catch(PDOException $e) {
             if (strpos($e->getMessage(), 'student.username') !== false)
                 $_SESSION['message'] = 'Username already exists!';
+            else if (strpos($e->getMessage(), 'student.email') !== false)
+                $_SESSION['message'] = 'Email already exists!';
             else
                 $_SESSION['message'] = 'Registration failed!';
             header('Location: ../pages/student_registration.php');
