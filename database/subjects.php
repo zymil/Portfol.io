@@ -41,6 +41,6 @@
         $stmt= $db->prepare('SELECT * from subject');
         $stmt->execute();
 
-        return ($stmt->fetch());
+        return ($stmt->fetchAll());
     }
 ?>

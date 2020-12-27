@@ -12,6 +12,7 @@
     $username=$_SESSION['username'];
     $result=getSubjects();
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,8 +52,9 @@
         <h3><?=$_SESSION['username']?>'s Portfolio:</h3>
         <ul>
             <?php foreach ($result as $column){ ?>
+                
                 <li>
-                    <a href=""><?php echo $column["name"] ?></a>
+                    <a href="list_gallery.php?"><?php echo $column["name"] ?></a>
                 </li>
             <?php } ?>
         </ul>
