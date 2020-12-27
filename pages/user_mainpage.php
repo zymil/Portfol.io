@@ -51,10 +51,10 @@
     <section id="subjects"> 
         <h3><?=$_SESSION['username']?>'s Portfolio:</h3>
         <ul>
-            <?php foreach ($result as $column){ ?>
+            <?php foreach ($result as $row){ ?>
                 
                 <li>
-                    <a href="list_gallery.php?"><?php echo $column["name"] ?></a>
+                    <a href="list_gallery.php?subject=<?php echo $row['id'] ?>"><?php echo $row["name"] ?></a>
                 </li>
             <?php } ?>
         </ul>

@@ -26,7 +26,7 @@
         $stmt= $db->prepare('SELECT name from subject where id = ?');
         $stmt->execute(array($admin_id));
 
-        return ($stmt->fetch());
+        return ($stmt->fetchColumn());
     }
 
     function getSubjectIDFromName($subject_name){

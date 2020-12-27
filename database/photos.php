@@ -24,7 +24,7 @@
     
     function getSubjectPhotos($subject_id) {
         global $db;
-        $stmt= $db->prepare('SELECT * from subject where subject_id = ?');
+        $stmt= $db->prepare('SELECT * from photo where subject_id = ?');
         $stmt->execute(array($subject_id));
 
         return ($stmt->fetchAll());
