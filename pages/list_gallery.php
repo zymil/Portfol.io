@@ -14,10 +14,10 @@
     //echo $subject_id;
     $subject_name=getSubjectNameFromID($subject_id);
     //echo $subject_name;
-    $results=getSubjectPhotos($subject_id);
-    echo $results;
-    var_dump($results);
-    print_r($results);
+    $result=getSubjectPhotos($subject_id);
+    echo $result;
+    var_dump($result);
+    print_r($result);
 
     $username=$_SESSION['username'];
 
@@ -50,8 +50,7 @@
 
 
     <nav id="operations">
-        <a href="../pages/subject_registration.php" id="Add">Add new Subject</a>
-        <a href="../pages/admin.php" id="Admin">Admin Tools</a>
+        <a href="user_mainpage.php" id="Back">Go back</a>
     </nav>
     <p></p>
     <p></p>
