@@ -28,11 +28,11 @@ $db->exec('
         CONSTRAINT user_unique_error UNIQUE (username)
     );
 
-    insert into student (username, password, email) values ("pudim", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "pudim@mail.com");
-    insert into student (username, password, email) values ("tarte", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "tarte@mail.com");
-    insert into student (username, password, email) values ("bolo", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "bolo@mail.com");
-    insert into student (username, password, email) values ("maçã", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "maca@mail.com");
-    insert into student (username, password, email) values ("roscas", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "roscas@mail.com");
+    insert into student (username, password, email) values ("pudim", "$2y$10$/T3ZUPfa8TJptlw1mPSVvuE9v4DW0VVRAgFYfC5vR7Xyc6piZ6/tK", "pudim@mail.com");
+    insert into student (username, password, email) values ("tarte", "$2y$10$/T3ZUPfa8TJptlw1mPSVvuE9v4DW0VVRAgFYfC5vR7Xyc6piZ6/tK", "tarte@mail.com");
+    insert into student (username, password, email) values ("bolo", "$2y$10$/T3ZUPfa8TJptlw1mPSVvuE9v4DW0VVRAgFYfC5vR7Xyc6piZ6/tK", "bolo@mail.com");
+    insert into student (username, password, email) values ("maçã", "$2y$10$/T3ZUPfa8TJptlw1mPSVvuE9v4DW0VVRAgFYfC5vR7Xyc6piZ6/tK", "maca@mail.com");
+    insert into student (username, password, email) values ("roscas", "$2y$10$/T3ZUPfa8TJptlw1mPSVvuE9v4DW0VVRAgFYfC5vR7Xyc6piZ6/tK", "roscas@mail.com");
     
     
     create table subject (
