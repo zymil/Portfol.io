@@ -1,7 +1,9 @@
 # SIBD
  PHP + HTML + CSS + SQL
  
- username: pudim, password: 12345;
+ Authors:
+ João Cristiano Rodrigues, up201406183
+ João Loureiro, up201604453
  
  Intructions:
  1. Clicar primeiro em "Criar base de dados" na página de login
