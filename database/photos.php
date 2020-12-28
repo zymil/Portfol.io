@@ -37,4 +37,12 @@
 
         return ($stmt->fetch());
     }
+
+    function checkAdmin($subject_id) {
+        global $db;
+        $stmt= $db->prepare('SELECT admin_id from subject where id = ?');
+        $stmt->execute(array($subject_id));
+
+        return ($stmt->fetch());
+    }
 ?>

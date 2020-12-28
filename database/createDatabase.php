@@ -29,10 +29,10 @@ $db->exec('
     );
 
     insert into student (username, password, email) values ("pudim", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "josepinhal2@mail.com");
-    insert into student (username, password, email) values ("José Pinhal", "pw", "josepinhal@mail.com");
-    insert into student (username, password, email) values ("Tozé Brito", "pw", "tozebrito@mail.com");
-    insert into student (username, password, email) values ("José Cid", "pw", "josecid@mail.com");
-    
+    insert into student (username, password, email) values ("tarte", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "josepinhal@mail.com");
+    insert into student (username, password, email) values ("bolo", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "tozebrito@mail.com");
+    insert into student (username, password, email) values ("maca", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "josecid@mail.com");
+    insert into student (username, password, email) values ("roscas", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "roscas@mail.com");
     
     
     create table subject (
@@ -40,12 +40,15 @@ $db->exec('
     	name text not null,
     	folder_path text,
         admin_id integer references student(id) not null,
+        admin_sub1 integer references student(id),
+        admin_sub2 integer references student(id),
+        admin_sub3 integer references student(id),
         CONSTRAINT user_unique_error UNIQUE (name)
         CONSTRAINT user_unique_error UNIQUE (folder_path)
     );
 
-    insert into subject (name, folder_path, admin_id) values ("SIBD", "/SIBD", 1);
-    insert into subject (name, folder_path, admin_id) values ("LPRO", "/LPRO", 3);
+    insert into subject (name, folder_path, admin_id) values ("SIBD", "pictures/SIBD", 1);
+    insert into subject (name, folder_path, admin_id) values ("LPRO", "pictures/LPRO", 3);
 
 
 

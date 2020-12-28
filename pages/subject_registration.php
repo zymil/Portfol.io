@@ -39,12 +39,12 @@
         <a href="../pages/user_mainpage.php" id="Back">Go back</a>
     </nav>
     <form action="../actions/ActionSubjectRegistration.php" method="POST">
-        <h3>Add a new Subject to you Portfolio!</h3>
-            <?php if (isset($_SESSION['message'])) { ?>
-                <div class="message">
-                    <?=$_SESSION['message']?>
-                </div>
-            <?php unset($_SESSION['message']); } ?>
+        <?php if (isset($_SESSION['message'])) { ?>
+            <div class="message">
+                <?=$_SESSION['message']?>
+            </div>
+        <?php unset($_SESSION['message']); } ?>
+        <h3>Add a new Subject to your Portfolio!</h3>
         <label>
             Subject Name:  <input type="text" name="subject_name"> 
         </label>

@@ -8,7 +8,7 @@
     $admin_username = $_SESSION['username'];
     $admin_id = getStudentIdFromUsername($admin_username);
 
-    $folder_path = NULL; // PASTA
+    $folder_path = "pictures/" . $subject_name; // PASTA
 
     if(strlen($subject_name) < 3){
     $_SESSION['message'] = 'Name too short';
@@ -22,10 +22,7 @@
     $_SESSION['message'] = 'Registration Successful!';
     header("Location: ../pages/user_mainpage.php");
     } catch(PDOException $e) {
-        if (strpos($e->getMessage(), 'subject.name') !== false)
-            $_SESSION['message'] = 'Subject already exists!';
-        else
-            $_SESSION['message'] = 'Registration Successful!';
+        $_SESSION['message'] = 'Subject already exists!';
         header('Location: ../pages/subject_registration.php');
     }
 

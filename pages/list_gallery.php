@@ -55,9 +55,10 @@
             </div>
         <?php unset($_SESSION['message']); } ?>
 
-        <input type="hidden" name="subject_name" value="<?php echo $subject_name ?>" >
-        <input type="hidden" name="subject_id" value="<?php echo $subject_id ?>" >
-        <input type="file" name="photoToUpload" id="photoToUpload">
+        <input type="hidden" name="subject_name" value = "<?php echo $subject_name ?>" >
+        <input type="hidden" name="subject_id" value = "<?php echo $subject_id ?>" >
+        <input type="hidden" name="admin_page" value = 0 >
+        <input type="file" name="photoToUpload" id = "photoToUpload">
         <input type="submit" value="Upload Image" name="submit">
     </form>
     
@@ -67,7 +68,7 @@
             <?php foreach($result as $row) { ?>
                 <li>
                     <a href="/pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"><img id="pics" src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"  alt="Picture"></a>
-                    <span><?php echo $row["name"]?></span>
+                    <span><b>Uploaded at:</b> <?php echo $row["created_at"]?></span>
                 </li>
             <?php } ?>
         </ul>

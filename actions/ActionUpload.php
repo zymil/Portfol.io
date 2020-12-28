@@ -10,8 +10,13 @@ $subject_id = $_POST['subject_id'];
 
 $main_dir = "../pictures/";
 $subject_name = $_POST['subject_name'];
-$goBackPath = "Location: ../pages/list_gallery.php?subject=" . $subject_id;
+$admin_page = $_POST['admin_page'];
 
+if($admin_page) {
+  $goBackPath = "Location: ../pages/admin.php?subject=" . $subject_id;
+} else {
+  $goBackPath = "Location: ../pages/list_gallery.php?subject=" . $subject_id;
+}
 $full_path = $main_dir . $subject_name . "/";
 
 if (!file_exists($full_path)) {

@@ -31,6 +31,14 @@
         return ($stmt->fetchColumn());
     }
 
+    function getStudentUsernameFromId($student_id) {
+        global $db;
+        $stmt= $db->prepare('SELECT username from student where id = ?');
+        $stmt->execute(array($student_id));
+
+        return ($stmt->fetchColumn());
+    }
+
     
 
 ?>
