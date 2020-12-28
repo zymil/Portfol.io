@@ -13,11 +13,11 @@ a#subs{
     background: rgb(0, 0, 0);
     color: #ffffff;
     text-decoration: none;
-    border-radius: 8%;
+    border-radius: 6%;
     border-bottom: #8C2D19;
-    border-bottom-width: 10em;
+    border-bottom-width: 15em;
     border-style: solid;
-    box-shadow: 0pt 0pt 0pt 2pt black;
+    box-shadow: 3pt 2pt 3pt 7pt black;
     margin-bottom: 20px; 
 }
 a#subs:hover{

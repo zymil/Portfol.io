@@ -29,4 +29,12 @@
 
         return ($stmt->fetchAll());
     }
+
+    function deletePhoto($photo_name) {
+        global $db;
+        $stmt= $db->prepare('DELETE from photo where name = ?');
+        $stmt->execute(array($photo_name));
+
+        return ($stmt->fetch());
+    }
 ?>

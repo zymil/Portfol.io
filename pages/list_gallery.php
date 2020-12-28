@@ -42,7 +42,7 @@
 
     <nav id="operations">
         <a href="user_mainpage.php" id="Back">Go back</a>
-        <a href="../pages/admin.php" id="Admin">Admin Tools</a>
+        <a href="../pages/admin.php?subject=<?php echo $subject_id ?>" id="Admin">Admin Tools</a>
     </nav>
     <p></p>
     <p></p>
@@ -65,7 +65,7 @@
         <ul>
             <?php foreach($result as $row) { ?>
                 <li>
-                    <a href="https://github.com/zymil/Portfolio"><img id="pics" src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"  alt="Picture"></a>
+                    <a href="/pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"><img id="pics" src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"  alt="Picture"></a>
                     <span><?php echo $row["name"]?></span>
                 </li>
             <?php } ?>
