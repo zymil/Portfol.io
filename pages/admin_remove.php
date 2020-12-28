@@ -18,7 +18,7 @@
     $goBackPath = "Location: ../pages/admin.php?subject=" . $subject_id;
 
     if($_SESSION['username'] != getStudentUsernameFromId( getAdmin_main($subject_id) )) {
-            $_SESSION['message'] = 'Only The Creator Can Add New Administrators';
+            $_SESSION['message'] = 'Only The Creator Can Remove Administrators';
             header($goBackPath);
             die();
     }
