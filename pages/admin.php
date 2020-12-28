@@ -60,9 +60,15 @@
     </form>
 
 
+
     <nav id="pictures"> 
         <h3><?php echo $subject_name ?>'s Portfolio:</h3>
         <ul>
+        <?php if (isset($_SESSION['message'])) { ?>
+            <div class="message">
+                <?=$_SESSION['message']?>
+            </div>
+        <?php unset($_SESSION['message']); } ?>
             <?php foreach($result as $row) { ?>
                 <li>
                     <a href="/pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"><img id="pics" src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"  alt="Picture"></a>
@@ -70,6 +76,7 @@
 
                             <input type="hidden" name="photo_name" value="<?php echo $row['name'] ?>" >
                             <input type="hidden" name="subject_id" value="<?php echo $subject_id ?>" >
+                            <input type="hidden" name="subject_name" value="<?php echo $subject_name ?>" >
                             <input type="submit" value="Delete Picture" name="admin">
 
                         </form>
