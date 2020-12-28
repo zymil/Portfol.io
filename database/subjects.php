@@ -45,6 +45,14 @@
         return ($stmt->fetchAll());
     }
 
+    function getSubjectData($subject_id) {
+        global $db;
+        $stmt= $db->prepare('SELECT * from subject where id = ?');
+        $stmt->execute(array($subject_id));
+
+        return ($stmt->fetchAll());
+    }
+
     function getAdmin_main($subject_id) {
         global $db;
         $stmt= $db->prepare('SELECT admin_id from subject where id = ?');
@@ -117,5 +125,27 @@
         }
         return 0;
     }
+
+    function removeAdmin($subject_id, $student_id) {
+        global $db;
+        if( getAdmin_sub1($subject_id) == $student_id) {
+            $stmt = $db->prepare('UPDATE subject SET admin_sub1=NULL WHERE id=?');
+            $stmt->execute(array($subject_id));
+            return 1;
+        }
+        if( getAdmin_sub2($subject_id) == $student_id) {
+            $stmt = $db->prepare('UPDATE subject SET admin_sub2=NULL WHERE id=?');
+            $stmt->execute(array($subject_id));
+            return 1;
+        }
+        if ( getAdmin_sub3($subject_id) == $student_id) {
+            $stmt = $db->prepare('UPDATE subject SET admin_sub3=NULL WHERE id=?');
+            $stmt->execute(array($subject_id));
+            return 1;
+        }
+        return 0;
+    }
+
+    
     
 ?>

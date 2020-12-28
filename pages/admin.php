@@ -54,6 +54,7 @@
     <nav id="operations">
         <a href="user_mainpage.php" id="Back">Go back</a>
         <a href="../pages/admin_add.php?subject=<?php echo $subject_id ?>" id="Admin">Add an Admin</a>
+        <a href="../pages/admin_remove.php?subject=<?php echo $subject_id ?>" id="Admin">Remove an Admin</a>
     </nav>
     <p></p>
     <p></p>
