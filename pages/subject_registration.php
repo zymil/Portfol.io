@@ -2,6 +2,7 @@
 
     include_once('../database/connect.php');
     include_once('../cookies/cookie.php');
+    include_once('../template/template.php');
 
     if(!isset($_SESSION['username']) ) {
         $_SESSION['message'] = 'Please Login first!';
@@ -16,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/MainpageStyle.css" rel="stylesheet">
-    <title> Portfol.io </title>
+    <?php fontAndTitle(); ?>
     
 </head>
 
@@ -51,9 +52,6 @@
         <input type="submit" value="Submit">
     </form>
 
-    <footer>
-        <a href="https://github.com/zymil/Portfolio">@github/Projeto</a>
-        <p>Copyright &copy; Grupo L, 2020</p>
-    </footer>
+    <?php footer() ?>
 </body>
 </html>

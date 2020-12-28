@@ -21,10 +21,8 @@ a#subs{
     margin-bottom: 20px; 
 }
 a#subs:hover{
-
-background-color: rgb(48, 48, 48);
-opacity: 90%;
-color: rgb(255, 255, 255);
-font-weight: bold;
-
+    background-color: rgb(48, 48, 48);
+    opacity: 90%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }

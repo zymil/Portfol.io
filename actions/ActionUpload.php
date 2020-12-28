@@ -43,7 +43,7 @@ if (file_exists($target_file)) {
 }
 
 // Check file size
-if ($_FILES["photoToUpload"]["size"] > 500000) {
+if ($_FILES["photoToUpload"]["size"] > 700000) {
   session_start();
   $_SESSION['message'] = "Sorry, your file is too large.";
   $uploadOk = 0;

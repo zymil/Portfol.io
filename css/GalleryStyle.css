@@ -1,18 +1,18 @@
 #pictures ul{
     display: grid;
-    grid-gap: 1em;
     grid-template-columns: repeat(6, minmax(1px, 100%));
     padding-left: 0;
-    list-style: none; 
+    list-style: none;
 }    
+
 #pictures li{
     padding: 1em;
-    margin-bottom: 3.5em;
+    margin-bottom: 1em;
 }   
 img#pics{
     max-width:100%;
     height:auto;
-    transition: transform .2s;
+    transition: transform .4s;
 }
 img#pics:hover{
     max-width:100%;
@@ -20,10 +20,19 @@ img#pics:hover{
     transform: scale(2);
 }
 a#subs:hover{
-
-background-color: rgb(48, 48, 48);
-opacity: 90%;
-color: rgb(255, 255, 255);
-font-weight: bold;
-
+    background-color: rgb(48, 48, 48);
+    opacity: 90%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+body > form div{
+    text-align: center;
+    color: white;
+    background-color: black;
+    padding: 0.6em;
+    margin: auto;
+    margin-left: 30em;
+    margin-right: 30em;
+    border-radius: 5%;
+ 
 }

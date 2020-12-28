@@ -12,13 +12,12 @@ body{
 }
 
 body > header{
-
     font-size: 2.1em;
     border-style: solid;
     flex-direction: column;
     text-align: center;
     border-bottom-width: 0.4em;
-    margin-bottom: 0.5em;
+    margin-bottom: -1em;
     margin-right: 10em;
     margin-left: 10em;
     margin-top: -1em;
@@ -28,7 +27,7 @@ body > header{
     border-radius: 37%;
     resize: vertical;
     overflow: auto;
-    font-family: "Lucida Handwriting";
+    font-family: 'Montserrat', sans-serif;
     display: flex;
 }
 
@@ -45,17 +44,6 @@ body > header h1 a:-webkit-any-link {
     border-radius: 7%;
 }
 
-body > footer{
-    text-align: right;
-    font-size: 0.65em;
-    margin: auto;
-    display: block;
-    margin-top: 10em;
-    text-decoration: none;
-    margin: 0;
-    margin-top: 35em;
-    margin-right: -5em;
-}
 body > div{
     text-align: right;
 }
@@ -67,8 +55,17 @@ body > div#username a{
     flex-direction: column;
 
 }
+body > footer {
+    text-align: right;
+    font-size: 0.80em;
+    margin: auto;
+    margin-top: 20em;
+}
 body > footer a{
-    color: black;
+    padding: 0.35em;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border-radius: 8%;
     text-decoration: none;
-    background-color: transparent;
+
 }

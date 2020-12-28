@@ -88,13 +88,15 @@ body input[type=submit]{
     background-color: #008CFF;
     color: white;
 }
-body > footer{
+body > footer {
     text-align: right;
-    font-size: 0.65em;
+    font-size: 0.80em;
     margin: auto;
-    display: block;
 }
 body > footer a{
-    text-align: left;
-    font-size: 1.5em;
+    padding: 0.35em;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border-radius: 8%;
+    text-decoration: none;
 }

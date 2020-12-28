@@ -1,5 +1,7 @@
 <?php 
     include_once('../cookies/cookie.php');
+    include_once('../template/template.php');
+
 
     if(isset($_SESSION['username']) ) {
         header('Location: user_mainpage.php');
@@ -12,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/LoginStyle.css" rel="stylesheet">
-    <title> Portfol.io </title>
+    <?php fontAndTitle(); ?>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
             Register now and start managing your classes smarter.
             <p>By registering you get the chance to organize your 
              class notes, sketches and schedule into one single place.</p>
-            <p>Register with your credentials as well as your class timetables and class id.
+            <p>Register with your credentials as well as your class timetables and start adding subjects to you portfolio.
              (As other students who are taking the same class will be able to access your snippets and vice-versa, only
              if you want to do so of course !)</p>
         </h2>

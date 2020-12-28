@@ -1,6 +1,7 @@
 <?php 
     include_once('../database/connect.php');
     include_once('../cookies/cookie.php');
+    include_once('../template/template.php');
 
 
     if(isset($_SESSION['username']) ) {
@@ -14,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/RegistryStyle.css" rel="stylesheet">
-    <title> Portfol.io </title>
+    <?php fontAndTitle(); ?>
 </head>
 
 <body>
@@ -58,11 +59,6 @@
         </form>
     </div>
 
-   <footer>
-    <a href="https://github.com/zymil/Portfolio">@github/Projeto</a>
-    <p></p>
-    <a href="../database/createDatabase.php">Criar a base de dados </a>
-    <p>Copyright &copy; Grupo L, 2020</p>
-</footer>
+    <?php footer() ?>
 </body>
 </html>

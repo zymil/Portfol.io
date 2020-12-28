@@ -1,10 +1,11 @@
 <?php 
-
+    include_once('../template/template.php');
     include_once('../database/connect.php');
     include_once('../cookies/cookie.php');
     include_once('../database/students.php');
     include_once('../database/subjects.php');
     include_once('../database/photos.php');
+    
 
     if(!isset($_SESSION['username']) ) {
         $_SESSION['message'] = 'Please Login first!';
@@ -26,7 +27,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/MainpageStyle.css" rel="stylesheet">
     <link href="../css/GalleryStyle.css" rel="stylesheet">
-    <title> Portfol.io </title>
+    <?php fontAndTitle(); ?>
 </head>
 
 <body>
@@ -71,12 +72,6 @@
             <?php } ?>
         </ul>
     </nav> 
-   
-        
-    
-    <footer>
-        <a href="https://github.com/zymil/Portfolio">@github/Projeto</a>
-        <p>Copyright &copy; Grupo L, 2020</p>
-    </footer>
+    <?php footer() ?>
 </body>
 </html>
