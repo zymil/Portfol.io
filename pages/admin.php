@@ -52,7 +52,7 @@
     </div>
 
     <nav id="operations">
-        <a href="user_mainpage.php" id="Back">Go back</a>
+        <a href="../pages/list_gallery.php?subject=<?php echo $subject_id ?>" id="Back">Go back</a>
         <a href="../pages/admin_add.php?subject=<?php echo $subject_id ?>" id="Admin">Add an Admin</a>
         <a href="../pages/admin_remove.php?subject=<?php echo $subject_id ?>" id="Admin">Remove an Admin</a>
     </nav>
@@ -81,6 +81,7 @@
             <?php foreach($result as $row) { ?>
                 <li>
                     <a href="/pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"><img id="pics" src="../pictures/<?php echo $subject_name ?>/<?php echo $row['name'] ?>"  alt="Picture"></a>
+                        <span><b>Uploaded at:</b> <?php echo $row["created_at"]?></span>
                         <form action="../actions/ActionDeletePhoto.php" method="post" enctype="multipart/form-data">
 
                             <input type="hidden" name="photo_name" value="<?php echo $row['name'] ?>" >

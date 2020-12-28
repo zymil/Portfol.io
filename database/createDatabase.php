@@ -28,10 +28,10 @@ $db->exec('
         CONSTRAINT user_unique_error UNIQUE (username)
     );
 
-    insert into student (username, password, email) values ("pudim", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "josepinhal2@mail.com");
-    insert into student (username, password, email) values ("tarte", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "josepinhal@mail.com");
-    insert into student (username, password, email) values ("bolo", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "tozebrito@mail.com");
-    insert into student (username, password, email) values ("maca", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "josecid@mail.com");
+    insert into student (username, password, email) values ("pudim", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "pudim@mail.com");
+    insert into student (username, password, email) values ("tarte", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "tarte@mail.com");
+    insert into student (username, password, email) values ("bolo", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "bolo@mail.com");
+    insert into student (username, password, email) values ("maçã", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "maca@mail.com");
     insert into student (username, password, email) values ("roscas", "$2y$12$88LFrKB2TJtpMAsOzC6HlepTmDXy5dYJeGviZ73zxXLHWGHs0nITa", "roscas@mail.com");
     
     
@@ -47,42 +47,9 @@ $db->exec('
         CONSTRAINT user_unique_error UNIQUE (folder_path)
     );
 
-    insert into subject (name, folder_path, admin_id) values ("SIBD", "pictures/SIBD", 1);
-    insert into subject (name, folder_path, admin_id) values ("LPRO", "pictures/LPRO", 3);
-
-
-
-    create table subject_class (
-    	id integer primary key autoincrement,
-    	weekday text not null,
-    	start_hour integer not null,
-    	start_min integer not null,
-    	end_hour integer not null,
-    	end_min integer not null,
-    	subject_id integer references subject(id) not null,
-    	constraint weekday_incorrect check (weekday = "monday" OR weekday = "tuesday" OR weekday = "wednesday" OR weekday = "thursday" OR weekday = "friday"),
-    	constraint start_hour_must_be_greater_than_end_hour check (end_hour >= start_hour)
-    );
-
-    insert into subject_class (weekday, start_hour, start_min, end_hour, end_min, subject_id) 
-    	values (
-    		"tuesday", 
-    		13,
-    		30,
-    		14,
-    		00,
-    		1
-    );
-
-
-
-    create table week_portfolio (
-    	id integer primary key,
-    	folder_path text,
-    	subject_id integer references subject(id) not null
-    );
-
-    insert into week_portfolio (id, folder_path, subject_id) values (1, "SIBD/week1", 1);
+    insert into subject (name, folder_path, admin_id, admin_sub1, admin_sub2) values ("SIBD", "pictures/SIBD", 1, 3, 4);
+    insert into subject (name, folder_path, admin_id, admin_sub1, admin_sub2) values ("LPRO", "pictures/LPRO", 3, 5, 2);
+    insert into subject (name, folder_path, admin_id, admin_sub1) values ("TCON", "pictures/TCON", 4, 1);
 
     
     
@@ -94,9 +61,16 @@ $db->exec('
         created_at timestamp DEFAULT CURRENT_TIMESTAMP not null
     );
 
-    insert into photo (name, subject_id, student_id) values ("1.jpg", 1, 2);
-    insert into photo (name, subject_id, student_id) values ("2.jpg", 1, 1);
-    insert into photo (name, subject_id, student_id) values ("3.jpg", 2, 3);
+    insert into photo (name, subject_id, student_id) values ("alltheoptions.png", 1, 2);
+    insert into photo (name, subject_id, student_id) values ("sysinfo.png", 1, 3);
+    insert into photo (name, subject_id, student_id) values ("juilio.jpg", 1, 3);
+    insert into photo (name, subject_id, student_id) values ("redfoxv2.png", 1, 5);
+    insert into photo (name, subject_id, student_id) values ("1.jpg", 1, 1);
+    insert into photo (name, subject_id, student_id) values ("HIDArduinoProof.png", 1, 5);
+    insert into photo (name, subject_id, student_id) values ("immendorff.jpg", 1, 2);
+    insert into photo (name, subject_id, student_id) values ("3.jpg", 2, 4);
+    insert into photo (name, subject_id, student_id) values ("image.jpg", 3, 3);
+    insert into photo (name, subject_id, student_id) values ("scotiapiper.jpg", 3, 1);
 
 
     COMMIT TRANSACTION;
