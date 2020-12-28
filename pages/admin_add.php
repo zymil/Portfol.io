@@ -16,9 +16,9 @@
     $goBackPath = "Location: ../pages/admin.php?subject=" . $subject_id;
 
     if($_SESSION['username'] != getStudentUsernameFromId( getAdmin_main($subject_id) )) {
-            $_SESSION['message'] = 'Only The Creator Can add New Administrators';
-            header($goBackPath);
-            die();
+        $_SESSION['message'] = 'Only The Creator Can add New Administrators';
+        header($goBackPath);
+        die();
     }
 
 ?>
@@ -29,8 +29,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/MainpageStyle.css" rel="stylesheet">
+    <link href="../css/GalleryStyle.css" rel="stylesheet">
     <?php fontAndTitle(); ?>
-    
 </head>
 
 <body>
@@ -57,7 +57,7 @@
         </label>
         <p></p>
         <input type="hidden" name="subject_id" value = "<?php echo $subject_id ?>" >
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit"id="submitadmin">
     </form>
 
     <?php footer() ?>

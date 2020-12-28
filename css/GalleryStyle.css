@@ -4,7 +4,6 @@
     padding-left: 0;
     list-style: none;
 }    
-
 #pictures li{
     padding: 1em;
     margin-bottom: 1em;
@@ -34,5 +33,40 @@ body > form div{
     margin-left: 30em;
     margin-right: 30em;
     border-radius: 5%;
- 
+}
+body > nav input#delete{
+    padding: 0.2em;
+    background: rgb(221, 221, 221);
+    color: #4d4d4d;
+    border-radius: 13%;
+}
+body > form input#submitphoto{
+    padding: 0.6em;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border-radius: 7%;
+}
+body > form input#submitadmin{
+    padding: 0.6em;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border-radius: 7%;
+}
+body > form input#adminremove{
+    padding: 0.4em;
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    border-radius: 10%;
+}
+
+form#formremove ul {
+    display: inline-flex;
+    margin-top: -1em;
+    list-style: none;
+    padding:1em;
+}
+form#formremove li {
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
 }

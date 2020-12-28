@@ -86,7 +86,7 @@
                             <input type="hidden" name="photo_name" value="<?php echo $row['name'] ?>" >
                             <input type="hidden" name="subject_id" value="<?php echo $subject_id ?>" >
                             <input type="hidden" name="subject_name" value="<?php echo $subject_name ?>" >
-                            <input type="submit" value="Delete Picture" name="admin">
+                            <input type="submit" value="Delete Picture" name="admin"id="delete">
 
                         </form>
                 </li>

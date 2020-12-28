@@ -31,6 +31,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/MainpageStyle.css" rel="stylesheet">
+    <link href="../css/GalleryStyle.css" rel="stylesheet">
     <?php fontAndTitle(); ?>
     
 </head>
@@ -46,9 +47,9 @@
     </div>
     <nav id="operations">
         <a href="../pages/admin.php?subject=<?php echo $subject_id ?>" id="Back">Go back</a>
+        <h3>Admin users added: </h3>
     </nav>
-    
-    <form action="../actions/ActionAdminRemove.php" method="POST">
+    <form action="../actions/ActionAdminRemove.php" method="POST" id="formremove">
         <?php if (isset($_SESSION['message'])) { ?>
             <div class="message">
                 <?=$_SESSION['message']?>
@@ -64,7 +65,7 @@
                                 <form action="../actions/ActionAdminRemove.php" method="post" enctype="multipart/form-data">
                                     <input type="hidden" name="subject_id" value="<?php echo $subject_id ?>" >
                                     <input type="hidden" name="student_id" value="<?php echo $row["admin_sub1"] ?>" >
-                                    <input type="submit" value="remove" name="admin_sub1">
+                                    <input type="submit" value="remove" name="admin_sub1"id="adminremove">
 
                                 </form>
                         </li>
@@ -77,7 +78,7 @@
 
                                 <input type="hidden" name="subject_id" value="<?php echo $subject_id ?>" >
                                     <input type="hidden" name="student_id" value="<?php echo $row["admin_sub2"] ?>" >
-                                    <input type="submit" value="remove" name="admin_sub2">
+                                    <input type="submit" value="remove" name="admin_sub2"id="adminremove">
 
                                 </form>
                         </li>
@@ -90,7 +91,7 @@
 
                                 <input type="hidden" name="subject_id" value="<?php echo $subject_id ?>" >
                                     <input type="hidden" name="student_id" value="<?php echo $row["admin_sub3"] ?>" >
-                                    <input type="submit" value="remove" name="admin_sub3">
+                                    <input type="submit" value="remove" name="admin_sub3"id="adminremove">
 
                                 </form>
                         </li>

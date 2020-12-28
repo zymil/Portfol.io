@@ -17,8 +17,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/MainpageStyle.css" rel="stylesheet">
+    <link href="../css/PushFooterDown.css" rel="stylesheet">
+    <link href="../css/GalleryStyle.css" rel="stylesheet">
     <?php fontAndTitle(); ?>
-    
 </head>
 
 <body>
@@ -49,7 +50,7 @@
             Subject Name:  <input type="text" name="subject_name"> 
         </label>
         <p></p>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit"id="submitphoto">
     </form>
 
     <?php footer() ?>
