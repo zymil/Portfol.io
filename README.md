@@ -1,6 +1,7 @@
 # SIBD
- PHP + HTML + CSS + SQL
- 
+We developed this website for our Information Systems and Databases course with the objective of proving that we learned how to build a website from the ground-up, this includes  PHP + HTML + CSS + SQL. We used Docker to test the website in our local loopback, but we plan to keep on working on it and maybe launch it on a public domain someday. 
+
+
  Authors:
  João Cristiano Rodrigues, up201406183
  João Loureiro, up201604453
