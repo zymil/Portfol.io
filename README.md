@@ -14,3 +14,4 @@
  2. Go back to the first page
  3. Login (you can use: username: pudim, password: 12345)
  
+This webapp was developed to help you organize your notes and to create a community bank of sketches so everyone can learn new subjects with little effort.
