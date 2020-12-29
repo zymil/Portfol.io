@@ -25,3 +25,4 @@ Rua Dr. Roberto Frias, 4200-465 PORTO
 This webapp was developed to help you organize your notes and to create a community bank of sketches so everyone can learn new subjects with little effort.
 The users are able to add more files and subjects as they wish, but only the first ones to create a specific Subject get admin rights and are able to delete notes of that specific subject.
 We believe this is extremely usefull for students because we've been there when you take a photo of the class board saying "I'll copy this to my notebook later" and then never actually do it, because our phone galleries are a complete mess nowadays.
+We also plant to launch a fully working app for you phone so you never ever have the excuse to forget about your notes, taking Gigabytes of space in your phone forever!
