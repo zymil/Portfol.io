@@ -14,5 +14,3 @@
  2. Go back to the first page
  3. Login (you can use: username: pudim, password: 12345)
  
-
-4. Enjoy :)
